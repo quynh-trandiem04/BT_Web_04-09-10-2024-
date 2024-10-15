@@ -1,17 +1,12 @@
 package vn.iotstar.service;
 
-import vn.iotstar.models.UserModel;
+import java.util.List;
+import vn.iotstar.entity.User;
 
 public interface IUserService {
-
-		UserModel login(String username, String password);
-		UserModel findByUsername(String username);
-		boolean checkExistUsername(String username);
-		boolean checkExistPhone(String phone);
-		boolean register(String email, String password, String username, String fullname, String phone);
-		boolean checkExistEmail(String email);
-		void insert(UserModel user);
-		boolean update(UserModel user);
-		void updatePassword(String username, String password);
+    List<User> getAllUsers();
+    User getUserById(String userId);
+    User saveUser(User user);
+    void deleteUser(String userId);
+    List<User> searchUsers(String keyword);
 }
-

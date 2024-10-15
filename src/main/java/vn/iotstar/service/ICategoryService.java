@@ -3,7 +3,6 @@ package vn.iotstar.service;
 import java.util.List;
 
 import vn.iotstar.entity.Category;
-import vn.iotstar.models.CategoryModel;
 
 public interface ICategoryService {
 	int count();
